@@ -15,7 +15,7 @@ import { useRouter, useLocalSearchParams, useFocusEffect } from "expo-router";
 import { colors, fonts, ff, CalendarIcon } from "../lib/appTheme";
 import { supabase } from "../lib/supabase";
 
-/* ---------------- ข้อมูลตัวอย่าง ---------------- */
+/* ---------------- ข้อมูลห้อง ---------------- */
 
 type Room = {
   id: string;
@@ -47,6 +47,10 @@ type Notice = {
   read: boolean;
 };
 
+const IMG_A = "https://images.unsplash.com/photo-1497366754035-f200968a6e72?w=500";
+const IMG_B = "https://images.unsplash.com/photo-1497366811353-6870744d04b2?w=500";
+const IMG_C = "https://images.unsplash.com/photo-1497366216548-37526070297c?w=500";
+
 const ROOMS: Room[] = [
   {
     id: "301",
@@ -55,7 +59,7 @@ const ROOMS: Room[] = [
     capacity: "4-6 คน",
     capMin: 4,
     capMax: 6,
-    image: "https://images.unsplash.com/photo-1497366754035-f200968a6e72?w=500",
+    image: IMG_A,
   },
   {
     id: "404",
@@ -64,7 +68,7 @@ const ROOMS: Room[] = [
     capacity: "6-8 คน",
     capMin: 6,
     capMax: 8,
-    image: "https://images.unsplash.com/photo-1497366811353-6870744d04b2?w=500",
+    image: IMG_B,
   },
   {
     id: "501",
@@ -73,7 +77,70 @@ const ROOMS: Room[] = [
     capacity: "4-6 คน",
     capMin: 4,
     capMax: 6,
-    image: "https://images.unsplash.com/photo-1497366216548-37526070297c?w=500",
+    image: IMG_C,
+  },
+  {
+    id: "502-503",
+    name: "CITU Study Room 502-503",
+    location: "อาคาร CITU ชั้น 5",
+    capacity: "8-12 คน",
+    capMin: 8,
+    capMax: 12,
+    image: IMG_A,
+  },
+  {
+    id: "504",
+    name: "CITU Study Room 504",
+    location: "อาคาร CITU ชั้น 5",
+    capacity: "4-6 คน",
+    capMin: 4,
+    capMax: 6,
+    image: IMG_C,
+  },
+  {
+    id: "505",
+    name: "CITU Study Room 505",
+    location: "อาคาร CITU ชั้น 5",
+    capacity: "4-6 คน",
+    capMin: 4,
+    capMax: 6,
+    image: IMG_A,
+  },
+  {
+    id: "506",
+    name: "CITU Study Room 506",
+    location: "อาคาร CITU ชั้น 5",
+    capacity: "4-6 คน",
+    capMin: 4,
+    capMax: 6,
+    image: IMG_B,
+  },
+  {
+    id: "507",
+    name: "CITU Study Room 507",
+    location: "อาคาร CITU ชั้น 5",
+    capacity: "4-6 คน",
+    capMin: 4,
+    capMax: 6,
+    image: IMG_C,
+  },
+  {
+    id: "508",
+    name: "CITU Study Room 508",
+    location: "อาคาร CITU ชั้น 5",
+    capacity: "4-6 คน",
+    capMin: 4,
+    capMax: 6,
+    image: IMG_A,
+  },
+  {
+    id: "509-510",
+    name: "CITU Study Room 509-510",
+    location: "อาคาร CITU ชั้น 5",
+    capacity: "8-12 คน",
+    capMin: 8,
+    capMax: 12,
+    image: IMG_B,
   },
 ];
 
